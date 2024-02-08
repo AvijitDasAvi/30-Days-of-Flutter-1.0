@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class/pages/home_page.dart';
+import 'package:flutter_class/utils/routes.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -50,7 +52,11 @@ class LoginPage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                print("CLICKED");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomePage(),
+                    ));
               },
               // ignore: sort_child_properties_last
               child: const Text(
