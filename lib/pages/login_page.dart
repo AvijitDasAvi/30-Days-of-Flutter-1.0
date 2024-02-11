@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_class/pages/home_page.dart';
 import 'package:flutter_class/utils/routes.dart';
 
 class LoginPage extends StatelessWidget {
@@ -52,11 +51,7 @@ class LoginPage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => HomePage(),
-                    ));
+                Navigator.pushNamed(context, MyRoutes.homeRoute);
               },
               // ignore: sort_child_properties_last
               child: const Text(
