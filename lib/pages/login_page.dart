@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_class/utils/routes.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final String name = "";
   @override
   Widget build(BuildContext context) {
     return Material(
