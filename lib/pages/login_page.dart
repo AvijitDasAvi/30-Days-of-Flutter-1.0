@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_class/utils/routes.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -9,7 +8,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final String name = "";
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -25,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
               height: 12,
             ),
             const Text(
-              "Welcome",
+              "Welcome ",
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
             const SizedBox(
@@ -48,30 +46,14 @@ class _LoginPageState extends State<LoginPage> {
                       hintText: "Enter Password",
                       labelText: "Password",
                     ),
-                  )
+                  ),
+                  Container(),
                 ],
               ),
             ),
             const SizedBox(
               height: 15,
             ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, MyRoutes.homeRoute);
-              },
-              // ignore: sort_child_properties_last
-              child: const Text(
-                "LOGIN",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0),
-              ),
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
-                foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
-                minimumSize: MaterialStateProperty.all(
-                  const Size(200, 50),
-                ),
-              ),
-            )
           ],
         ),
       ),
